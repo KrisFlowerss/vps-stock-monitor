@@ -151,7 +151,7 @@ class StockMonitor:
                 return False  # 缺货
 
             # 其次，检查页面中是否包含 'out of stock', '缺货' 这类文字
-            out_of_stock_keywords = ['out of stock', '缺货', 'sold out', 'no stock', '缺貨中']
+            out_of_stock_keywords = ['out of stock', '缺货', 'sold out', 'no stock', '缺貨中', 'produkt ist ausverkauft']
             page_text = soup.get_text().lower()  # 获取网页的所有文本并转为小写
             for keyword in out_of_stock_keywords:
                 if keyword in page_text:
